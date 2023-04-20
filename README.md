@@ -27,12 +27,24 @@ Your challenge is as follows:
 We need 2 use cases: a Circuitplayground Express as sender of the information, and another one as receiver.
 
 ``` py
-import neopixel
+# Sending morse code using neopixels
 
+import neopixel
 neo = neopixel.NeoPixel(board.NEOPIXEL, 10, brightness=0.05, auto_write=False)
 
-letters = {"A":[1,3],"B":[3,1,1,1],"C":[3,1,3,1],"D":[3,1,1],"E":[1],"F":[3,1,1,1],"G":[3,3,1],"H":[1,1,1,1],
-"I":[1,1],"J":[1,3,3,3],"K":[3,1,3],"L":[1,3,1,1],"M":[3,3],"N":[3,1],"O":[3,3,3],"P":[1,3,3,1],"Q":[3,3,1,3],
-"R":[1,3,1],"S":[1,1,1],"T":[3],"U":[1,1,3],"V":[1,1,1,3],"W":[1,3,3],"X":[3,1,1,3],"Y":[3,1,3,3],"Z":[3,3,1,1]}
+message = "HELLO WORLD"
 
+letters = {"A":[1,3],"B":[3,1,1,1],"C":[3,1,3,1],"D":[3,1,1],"E":[1],"F":[3,1,1,1],"G":[3,3,1],
+"H":[1,1,1,1],"I":[1,1],"J":[1,3,3,3],"K":[3,1,3],"L":[1,3,1,1],"M":[3,3],"N":[3,1],"O":[3,3,3],
+"P":[1,3,3,1],"Q":[3,3,1,3],"R":[1,3,1],"S":[1,1,1],"T":[3],"U":[1,1,3],"V":[1,1,1,3],
+"W":[1,3,3],"X":[3,1,1,3],"Y":[3,1,3,3],"Z":[3,3,1,1]}
+```
+
+And the decoder:
+
+``` py
+# Receiving and decoding the message
+# Probably need some calibration code for pulse width and light intensity average
+
+input = phototransistor.A8
 ```
